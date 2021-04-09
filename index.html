@@ -1,7 +1,39 @@
 <html>
-<body style="background-image: url('files/bg.png');text-align:center;background-size: 23px 46px;">
+<body style="background:#000;text-align:center;background-size: 23px 46px;">
 <svg width="650" height="650" viewBox="-125 -125 250 250" style="border:0px solid #777;">
-
+    <defs>
+        <radialGradient id="radialGradient" cx="0.35" cy="0.35" r="0.75" fx="0.25" fy="0.30">
+            <stop offset="0%" stop-color="#999999"/>
+            <stop offset="65%" stop-color="#191919"/>
+        </radialGradient>
+        <linearGradient id="redLinearGradient">
+            <stop class="stop1" offset="0%"/>
+            <stop class="stop2" offset="50%"/>
+            <stop class="stop3" offset="100%"/>
+        </linearGradient>
+        <style type="text/css"><![CDATA[
+				#rect1 { fill: url(#redLinearGradient); }
+				.stop1 { stop-color: #D52B1E; }
+				.stop2 { stop-color: #D52B1E; }
+				.stop3 { stop-color: #D52B1E; }
+				]]></style>
+        <linearGradient id="verticalWhiteLinearGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFF;stop-opacity:0.85"/>
+            <stop offset="100%" style="stop-color:#FFF;stop-opacity:0.2"/>
+        </linearGradient>
+        <linearGradient id="verticalWhiteLinearGradientBottom" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFF;stop-opacity:0.2"/>
+            <stop offset="100%" style="stop-color:#FFF;stop-opacity:0"/>
+        </linearGradient>
+        <linearGradient id="verticalBlackLinearGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" style="stop-color:#000;stop-opacity:0.45"/>
+            <stop offset="75%" style="stop-color:#000;stop-opacity:0"/>
+        </linearGradient>
+        <linearGradient id="verticalBlackLinearGradientBottom" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" style="stop-color:#000;stop-opacity:0.95"/>
+            <stop offset="75%" style="stop-color:#000;stop-opacity:0.35"/>
+        </linearGradient>
+    </defs>
     <!--черный кант\фон с просветами-->
     <g>
         <polygon
@@ -65,16 +97,36 @@
     </g>
 
     <g>
-        <!-- клинок -->
+        <!-- клинок --><!-- рукоять эфеса -->
         <polygon
                 points="
-                    -10 , 0
-                    +10 , 0
-                    +10 , 110
-                    +00 , 117.5
+                    -10 , -80
                     -10 , 110
-						"
+                    +00 , 117.5
+                    +10 , 110
+                    +10 , -80
+                "
                 style="fill:#D52B1E;stroke:#fff;stroke-width:3"
+        />
+        <polygon
+                points="
+                    -10 , -80
+                    -10 , 110
+                    +00 , 117.5
+                    +10 , 110
+                    +10 , -80
+					"
+                style="fill:url(#verticalBlackLinearGradient);stroke:#fff;stroke-width:3"
+        />
+        <polygon
+                points="
+                    -10 , -80
+                    -10 , 110
+                    +00 , 117.5
+                    +10 , 110
+                    +10 , -80
+					"
+                style="fill:url(#verticalWhiteLinearGradientBottom);stroke:#fff;stroke-width:3"
         />
     </g>
     <!-- Щит -->
@@ -90,6 +142,17 @@
                     -50 , +20
                 "
                 style="fill:#0039A6;stroke:#fff;stroke-width:3"
+        />
+        <polygon
+                points="
+                    -50 , -20
+                    +50 , -20
+                    +50 , +0
+                    -30 , +0
+                    -30 , +20
+                    -50 , +20
+					"
+                style="fill:url(#verticalWhiteLinearGradientBottom);stroke:#fff;stroke-width:3"
         />
         <!-- низ -->
         <polygon
@@ -109,19 +172,27 @@
 					"
                 style="fill:#0039A6;stroke:#fff;stroke-width:3"
         />
+        <polygon
+                points="
+                    -50 , 40
+                    -30 , 40
+                    -30 , 60
+                    +00 , 80
+                    +30 , 60
+                    +30 , 40
+                    -50 , 40
+                    -50 , 20
+                    +50 , 20
+                    +50 , 70
+                    +00 , 105
+                    -50 , 70
+					"
+                style="fill:url(#verticalBlackLinearGradientBottom);stroke:#fff;stroke-width:3"
+        />
     </g>
     <!-- Т (Меч) -->
     <g>
-        <!-- рукоять эфеса -->
-        <polygon
-                points="
-                    -10 , -80
-                    -10 , -40
-                    +10 , -40
-                    +10 , -80
-                "
-                style="fill:#D52B1E;stroke:#fff;stroke-width:3"
-        />
+
         <!-- яблоко эфеса -->
         <polygon
                 points="
@@ -133,17 +204,55 @@
                 "
                 style="fill:#D52B1E;stroke:#fff;stroke-width:3"
         />
-
+        <polygon
+                points="
+                    -15 , -85
+                    -15 , -75
+                    +15 , -75
+                    +15 , -85
+                    +00 , -95
+					"
+                style="fill:url(#verticalWhiteLinearGradientBottom);stroke:#fff;stroke-width:3"
+        />
+        <polygon
+                points="
+                    -15 , -85
+                    -15 , -75
+                    +15 , -75
+                    +15 , -85
+                    +00 , -95
+					"
+                style="fill:url(#verticalBlackLinearGradient);stroke:#fff;stroke-width:3"
+        />
         <!-- гарда эфеса -->
         <polygon
                 points="
-                    -30 , -40
-                    +30 , -40
+                    -30 , -35
+                    +30 , -35
                     +30 , -20
                     -30 , -20
                 "
                 style="fill:#D52B1E;stroke:#fff;stroke-width:3"
         />
+        <polygon
+                points="
+                    -30 , -35
+                    +30 , -35
+                    +30 , -20
+                    -30 , -20
+					"
+                style="fill:url(#verticalBlackLinearGradient);stroke:#fff;stroke-width:3"
+        />
+        <polygon
+                points="
+                    -30 , -35
+                    +30 , -35
+                    +30 , -20
+                    -30 , -20
+					"
+                style="fill:url(#verticalWhiteLinearGradientBottom);stroke:#fff;stroke-width:3"
+        />
+
     </g>
 
 <!--    <text text-anchor="middle"-->
