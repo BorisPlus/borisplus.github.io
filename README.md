@@ -9,5 +9,6 @@ I like technologies, investigations and their interpenetrations.
 * [OTUS NoSQL. 2020. Resume.](https://github.com/BorisPlus/otus_nosql) 
 * [OTUS Linux. 2021.](https://github.com/BorisPlus/otus_linux)
 * [OTUS Linux. 2021. Control.](https://github.com/BorisPlus/otus_linux_control)
+* [OTUS Golang. 2023.03.](https://github.com/BorisPlus/OTUS-Go-2023-03)
 
 __With best regards__
